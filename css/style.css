@@ -1528,25 +1528,33 @@
 
 
 
-/* Logo oscuro oculto al inicio */
-.logo-scroll {
+/* =========================
+   LOGOS NAVBAR
+========================= */
+
+/* Logo negro oculto al inicio */
+.logo-scroll{
     display: none;
 }
 
-/* Cuando haces scroll */
-.sticky-top .logo-default {
-    display: none;
-}
-
-.sticky-top .logo-scroll {
+/* Logo blanco visible */
+.logo-default{
     display: inline-block;
 }
 
-/* Transición */
-.logo-default,
-.logo-scroll {
-    transition: .5s;
+/* Cuando hace scroll */
+.navbar.scrolled .logo-default{
+    display: none;
 }
 
+.navbar.scrolled .logo-scroll{
+    display: inline-block;
+}
 
-
+/* Tamaño */
+.logo-default,
+.logo-scroll{
+    height: 80px;
+    width: auto;
+    transition: 0.5s;
+}
