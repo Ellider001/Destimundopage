@@ -228,9 +228,32 @@
 }
 
 @media (max-width: 991.98px) {
+
+    /* Navbar fijo también en móviles */
     .sticky-top.navbar-light {
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         background: var(--bs-white);
+        z-index: 9999;
+        box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    }
+
+      /* Oculta logo blanco */
+    .logo-default {
+        display: none !important;
+    }
+
+    /* Muestra logo oscuro */
+    .logo-scroll {
+        display: inline-block !important;
+    }
+
+
+    /* Espacio para que el contenido no quede debajo */
+    body {
+        padding-top: 80px;
     }
 
     .navbar-light .navbar-brand h1 {
@@ -246,6 +269,8 @@
     .navbar-light .navbar-collapse {
         margin-top: 15px;
         border-top: 1px solid #DDDDDD;
+        background: #fff;
+        padding-bottom: 15px;
     }
 
     .navbar-light .navbar-nav .nav-link,
@@ -255,7 +280,7 @@
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
-    .navbar-light .navbar-nav .nav-link.active  {
+    .navbar-light .navbar-nav .nav-link.active {
         color: var(--bs-primary) !important;
     }
 
@@ -1498,3 +1523,30 @@
         max-height: 400px;
     }
 }
+
+
+
+
+
+/* Logo oscuro oculto al inicio */
+.logo-scroll {
+    display: none;
+}
+
+/* Cuando haces scroll */
+.sticky-top .logo-default {
+    display: none;
+}
+
+.sticky-top .logo-scroll {
+    display: inline-block;
+}
+
+/* Transición */
+.logo-default,
+.logo-scroll {
+    transition: .5s;
+}
+
+
+
