@@ -1558,3 +1558,21 @@
     width: auto;
     transition: 0.5s;
 }
+
+
+
+.presentacion{
+    padding: 10px 0;
+      
+}
+
+.icono-contacto{
+    font-size: 90px;
+    color: #0dcaf0;
+    transition: 0.3s;
+}
+
+.icono-contacto:hover{
+    transform: scale(1.1);
+    color: #012B45;
+}
