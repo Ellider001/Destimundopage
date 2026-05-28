@@ -1567,9 +1567,10 @@
 }
 
 .icono-contacto{
-    font-size: 90px;
+    font-size: 90px !important;
     color: #0dcaf0;
     transition: 0.3s;
+    display: inline-block;
 }
 
 .icono-contacto:hover{
