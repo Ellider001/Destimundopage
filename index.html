@@ -558,34 +558,50 @@ Travel Guide End
 </div>
 <!-- Testimonial End -->
 
-     <!-- Tour Booking Start -->
+    <!-- =========================
+     TOUR BOOKING START
+========================= -->
+
 <div class="container-fluid booking py-5">
     <div class="container py-5">
+
         <div class="row g-5 align-items-center">
 
-            <!-- Texto izquierdo -->
+            <!-- TEXTO -->
             <div class="col-lg-6">
-                <h5 class="section-booking-title pe-3">RESERVAS</h5>
+
+                <h5 class="section-booking-title pe-3">
+                    Reservas
+                </h5>
 
                 <h1 class="text-white mb-4">
                     Reserva en línea con Destimundo
                 </h1>
 
                 <p class="text-white mb-4">
-                    Planifica tu próximo viaje de forma rápida, segura y personalizada.
+                    Planifica tu próximo viaje de manera rápida, segura y personalizada.
                     Completa el formulario y uno de nuestros asesores te contactará
                     con las mejores opciones para tu experiencia.
                 </p>
 
-                <h5 class="text-white fw-bold">
+                <p class="text-white mb-4">
+                    En Destimundo entendemos que cada viaje es único.
+                    Por eso ofrecemos atención personalizada, múltiples opciones
+                    y acompañamiento durante todo el proceso para garantizar
+                    la mejor experiencia de viaje.
+                </p>
+
+                <h5 class="text-white fw-bold mb-4">
                     Solicitudes respondidas en un plazo de 24 a 72 horas laborables.
                 </h5>
+
             </div>
 
-            <!-- Formulario -->
+            <!-- FORMULARIO -->
             <div class="col-lg-6">
 
-                <form>
+                <form id="destimundo-form">
+
                     <div class="row g-3">
 
                         <!-- Nombre -->
@@ -594,9 +610,13 @@ Travel Guide End
                                 <input type="text"
                                        class="form-control bg-white border-0"
                                        id="name"
-                                       placeholder="Nombre completo">
+                                       name="nombre"
+                                       placeholder="Nombre completo"
+                                       required>
 
-                                <label for="name">Nombre completo</label>
+                                <label for="name">
+                                    Nombre completo
+                                </label>
                             </div>
                         </div>
 
@@ -606,65 +626,93 @@ Travel Guide End
                                 <input type="email"
                                        class="form-control bg-white border-0"
                                        id="email"
-                                       placeholder="Correo electrónico">
+                                       name="correo"
+                                       placeholder="Correo electrónico"
+                                       required>
 
-                                <label for="email">Correo electrónico</label>
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
                             </div>
                         </div>
 
                         <!-- Teléfono -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text"
+                                <input type="tel"
                                        class="form-control bg-white border-0"
-                                       id="phone"
-                                       placeholder="Teléfono / WhatsApp">
+                                       id="telefono"
+                                       name="telefono"
+                                       placeholder="Teléfono / WhatsApp"
+                                       required>
 
-                                <label for="phone">Teléfono / WhatsApp</label>
+                                <label for="telefono">
+                                    Teléfono / WhatsApp
+                                </label>
                             </div>
                         </div>
 
                         <!-- Servicios -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select bg-white border-0" id="servicios">
 
-                                    <option selected disabled>Seleccionar</option>
+                                <select class="form-select bg-white border-0"
+                                        id="servicios"
+                                        name="servicio"
+                                        required>
 
-                                    <option>Tickets aéreos </option>
-                                    <option>Hoteles nacionales</option>
-                                    <option>Hoteles internacionales </option>
-                                    <option>Circuitos Internacionales </option>
-                                    <option>Circuitos Nacionales</option>
-                                    <option>Cruceros </option>
-                                    <option>Seguros de viajes </option>
-                                    <option>Gestion de visados </option>
-                                    <option>Traslados terrestres </option>
-                                    <option>Alquiler de vehiculo </option>
+                                    <option selected disabled>
+                                        Seleccionar
+                                    </option>
+
+                                    <option>Boletos aéreos</option>
+                                    <option>Hotel</option>
+                                    <option>Tours</option>
+                                    <option>Excursiones</option>
+                                    <option>Cruceros</option>
+                                    <option>Seguro de viaje</option>
+                                    <option>Visado</option>
+                                    <option>Traslados</option>
+                                    <option>Alquiler de vehículo</option>
 
                                 </select>
 
-                                <label for="servicios">Servicios</label>
+                                <label for="servicios">
+                                    Servicios
+                                </label>
+
                             </div>
                         </div>
 
                         <!-- Fecha -->
                         <div class="col-md-6">
                             <div class="form-floating">
+
                                 <input type="date"
                                        class="form-control bg-white border-0"
-                                       id="fecha">
+                                       id="fecha"
+                                       name="fecha"
+                                       required>
 
-                                <label for="fecha">Fecha</label>
+                                <label for="fecha">
+                                    Fecha
+                                </label>
+
                             </div>
                         </div>
 
-                        <!-- Cantidad de viajeros -->
+                        <!-- Viajeros -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select bg-white border-0" id="viajeros">
 
-                                    <option selected disabled>Seleccionar</option>
+                                <select class="form-select bg-white border-0"
+                                        id="viajeros"
+                                        name="viajeros"
+                                        required>
+
+                                    <option selected disabled>
+                                        Seleccionar
+                                    </option>
 
                                     <option>1</option>
                                     <option>2</option>
@@ -674,16 +722,25 @@ Travel Guide End
 
                                 </select>
 
-                                <label for="viajeros">Cantidad de viajeros</label>
+                                <label for="viajeros">
+                                    Cantidad de viajeros
+                                </label>
+
                             </div>
                         </div>
 
                         <!-- Tipo de viaje -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select bg-white border-0" id="tipoViaje">
 
-                                    <option selected disabled>Seleccionar</option>
+                                <select class="form-select bg-white border-0"
+                                        id="tipoViaje"
+                                        name="tipoViaje"
+                                        required>
+
+                                    <option selected disabled>
+                                        Seleccionar
+                                    </option>
 
                                     <option>Vacaciones</option>
                                     <option>Luna de miel</option>
@@ -692,16 +749,25 @@ Travel Guide End
 
                                 </select>
 
-                                <label for="tipoViaje">Tipo de viaje</label>
+                                <label for="tipoViaje">
+                                    Tipo de viaje
+                                </label>
+
                             </div>
                         </div>
 
                         <!-- Presupuesto -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select bg-white border-0" id="presupuesto">
 
-                                    <option selected disabled>Seleccionar</option>
+                                <select class="form-select bg-white border-0"
+                                        id="presupuesto"
+                                        name="presupuesto"
+                                        required>
+
+                                    <option selected disabled>
+                                        Seleccionar
+                                    </option>
 
                                     <option>US$1,000</option>
                                     <option>US$1,000 - US$3,000</option>
@@ -710,49 +776,117 @@ Travel Guide End
 
                                 </select>
 
-                                <label for="presupuesto">Presupuesto</label>
+                                <label for="presupuesto">
+                                    Presupuesto
+                                </label>
+
                             </div>
                         </div>
 
                         <!-- Experiencia -->
                         <div class="col-12">
                             <div class="form-floating">
+
                                 <textarea class="form-control bg-white border-0"
-                                          placeholder="Experiencia"
                                           id="experiencia"
-                                          style="height: 100px"></textarea>
+                                          name="experiencia"
+                                          style="height: 100px"
+                                          required></textarea>
 
                                 <label for="experiencia">
                                     Cuéntanos qué experiencia deseas vivir
                                 </label>
+
                             </div>
                         </div>
 
                         <!-- Botón -->
                         <div class="col-12">
+
                             <button class="btn btn-primary text-white w-100 py-3"
                                     type="submit">
 
                                 Solicitar cotización
 
                             </button>
+
                         </div>
 
-                        <!-- Texto -->
                         <div class="col-12">
-                            <p class="text-white mb-0 small">
+                            <p class="text-white small mb-0">
                                 Tus datos están protegidos.
                             </p>
                         </div>
 
                     </div>
+
                 </form>
 
             </div>
+
         </div>
+
     </div>
 </div>
-<!-- Tour Booking End -->
+
+<!-- =========================
+     TOUR BOOKING END
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init("4lsXEFdAU_JFTwcGn");
+
+    const form = document.getElementById("destimundo-form");
+
+    form.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        const formData = {
+            nombre: document.getElementById("name").value,
+            correo: document.getElementById("email").value,
+            telefono: document.getElementById("telefono").value,
+            servicio: document.getElementById("servicios").value,
+            fecha: document.getElementById("fecha").value,
+            viajeros: document.getElementById("viajeros").value,
+            tipoViaje: document.getElementById("tipoViaje").value,
+            presupuesto: document.getElementById("presupuesto").value,
+            experiencia: document.getElementById("experiencia").value
+        };
+
+        emailjs.send(
+            "service_txrzmbf",
+            "template_patupbt",
+            formData
+        )
+        .then(function(response) {
+
+            alert("¡Solicitud enviada correctamente! Te contactaremos pronto.");
+
+            form.reset();
+
+            console.log("SUCCESS!", response);
+
+        })
+        .catch(function(error) {
+
+            console.error("FAILED...", error);
+
+            alert("Hubo un error al enviar la solicitud. Intenta nuevamente.");
+
+        });
+
+    });
+
+});
+</script>
+
+
+
 
 <!-- =========================
      INSTAGRAM FEED START
